@@ -136,6 +136,10 @@ ul {
     margin: 0;
 }
 
+.centerContent {
+    text-align: center;
+}
+
 #skillsSectionContent {
     display: flex;
 }

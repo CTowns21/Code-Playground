@@ -29,30 +29,50 @@
 </head>
 <body id="cloudResumeBody">
     <!-- Navigation -->
-    <ul id="sideNav">
-        <li class="sideNavItem" id="defaultItem"><a href="#aboutSection">About</a></li>
-        <li class="sideNavItem"><a href="#experienceSection">Experience</a></li>
-        <li class="sideNavItem"><a href="#educationSection">Education</a></li>
-        <li class="sideNavItem"><a href="#skillsSection">Skills</a></li>
-        <li class="sideNavItem"><a href="#certificationsSection">Certs</a></li>
-        <li class="sideNavItem"><a href="#articlesSection">Articles</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cloud Resume Challenge</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="sideNavItem" id="defaultItem"><a href="#aboutSection">About</a></li>
+                    <li class="sideNavItem"><a href="#experienceSection">Experience</a></li>
+                    <li class="sideNavItem"><a href="#educationSection">Education</a></li>
+                    <li class="sideNavItem"><a href="#skillsSection">Skills</a></li>
+                    <li class="sideNavItem"><a href="#certificationsSection">Certs</a></li>
+                    <li class="sideNavItem"><a href="#articlesSection">Articles</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Page Content -->
     <div>
-        <!-- About -->
-        <section class="resumeSection" id="aboutSection">
-            <header>
+
+    <!-- About -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">About</h2>
+            </div>
+            <div class="card-body">
                 <h1>Carson Towns</h1>
                 <nav>
                     <a class="socialLinks" href="mailto:carsontowns@yahoo.com" target="_blank">Email</a>
                     <a class="socialLinks" href="https://www.linkedin.com/in/carsontowns" target="_blank">LinkedIn</a>
                 </nav>
-            </header>
-        </section>
+            </div>
+        </div>
+    </div>
 
-        <!-- Experience -->
-        <section class="resumeSection" id="experienceSection">
-            <div class="resumeSectionContent">
+    <!-- Experience -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Experience</h2>
+            </div>
+            <div class="card-body">
                 <h2>Experience</h2>
                 <h3>Software Engineer</h3>
                 <p class="separator">~</p>
@@ -62,13 +82,18 @@
                     <li>UNDER CONSTRUCTION</li>
                 </ul>
             </div>
-        </section>
-        <!-- Education -->
-        <section class="resumeSection" id="educationSection">
-            <div class="resumeSectionContent">
-                <h2>Education</h2>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Education</h2>
+            </div>
+            <div class="card-body">
                 <div class="row">
-                    <div class="column">
+                    <div class="col-md-6">
                         <h3>Southern Methodist University 2023 - 2025</h3>
                             <p class="separator">~</p>
                             <h4>Master of Science</h4>
@@ -76,7 +101,7 @@
                                 <p>Major: Network Engineering - Emphasis: Cloud Engineering</p>
                                 <p>Lyle Graduate Leadership Certification Program</p>
                     </div>
-                    <div class="column">
+                    <div class="col-md-6">
                         <h3>Oklahoma Christian University 2019 - 2023</h3>
                             <p class="separator">~</p>
                             <h4>Bachelor of Science</h4>
@@ -86,67 +111,78 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Skills -->
-        <section class="resumeSection" id="skillsSection">
-            <div class="resumeSectionContent">
-                <h2>Skills</h2>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Skills</h2>
+            </div>
+            <div class="card-body">
                 <div class="row">
-                    <div class="column">
+                    <div class="col-md-6">
                         <h3>Programming Languages & Tools</h3>
-                            <p class="separator">~</p>
-                            <ul class="skillsSectionList">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Python</li>
-                                <li>Bash</li>
-                                <li>C++</li>
-                                <li>Java</li>
-                                <li>Linux</li>
-                                <li>Windows</li>
-                                <li>Cloud Services</li>
-                            </ul>
+                        <ul class="list-group">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Bash</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                            <li>Linux</li>
+                            <li>Windows</li>
+                            <li>Cloud Services</li>
+                        </ul>
                     </div>
-                    <div class="column">
+                    <div class="col-md-6">
                         <h3>Passionate About</h3>
-                            <p class="separator">~</p>
-                            <ul class="skillsSectionList">
-                                <li>Process Automation</li>
-                                <li>Cloud Computing</li>
-                                <li>Design-Centric Technology</li>
-                            </ul>
-                        <h3>Other Reasons You Want Me</h3>
-                            <p class="separator">~</p>
-                            <ul class="skillsSectionList">
-                                <li>Humor</li>
-                                <li>Collaboration</li>
-                                <li>Problem Solving</li>
-                                <li>Well-Spoken</li>
-                            </ul>
+                        <ul class="list-group">
+                            <li>Process Automation</li>
+                            <li>Cloud Computing</li>
+                            <li>Design-Centric Technology</li>
+                            <li>Humor</li>
+                            <li>Collaboration</li>
+                            <li>Problem Solving</li>
+                            <li>Well-Spoken</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Certifications -->
-        <section class="resumeSection" id="certificationsSection">
-            <div class="resumeSectionContent">
-                <h2>Certifications</h2>
-                    <ul>
-                        <li>None at the moment, but just wait...</li>
-                    </ul>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Certifications</h2>
             </div>
-        </section>
-        <!-- Articles -->
-        <section class="resumeSection" id="articlesSection">
-            <div class="resumeSectionContent">
-                <h2>Articles</h2>
-                <ul>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li>None at the moment, but just wait...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Articles -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Articles</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
                     <li><a href="https://pigeonhole.substack.com/p/the-cloud-resume-challenge-part-i" target="_blank">How This Website Came to Be</a></li><br>
                     <li><a href="https://pigeonhole.substack.com/" target="_blank">Further Reading From My Personal Blog</a></li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </div>
+
     </div>
 </body>
 </html>

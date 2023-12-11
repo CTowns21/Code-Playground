@@ -2,21 +2,17 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
 body {
     font-family: 'Jost', sans-serif;
     color: #2d3746;
     background-color: #222831;
+    padding-top: 150px;
 }
 
 p {
     margin: 0;
-    padding: 10px;    
+    padding: 10px;
+    font-size: 1.5vw;  
 }
 
 nav {
@@ -38,24 +34,21 @@ a:visited {
     color: dodgerblue;
 }
 
-h1 {
-    font-size: 200%;
-}
-
-h1, h2 {
-    text-shadow: 2px -2px #df9c00;
-}
-
-h1, h2, .sideNavItem {
-    text-transform: uppercase;
+a:hover {
+    color: purple;
 }
 
 h2 {
+    text-shadow: 2px -2px #df9c00;
     padding-bottom: 20px;
 }
 
-h2, h3, h4 {
-    margin: 0;
+h2, .sideNavItem {
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.8vw;
 }
 
 ul {
@@ -64,48 +57,42 @@ ul {
     margin: 0;
 }
 
-.resumeSection {
-    margin-block: 10px;
-    margin-left: 30%;
-    margin-right: 10%;
-    font-size: 225%;
-    padding: 6px;
-    height: 95vh;
-    width: 60vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-style: solid;
-    border-color: #df9c00;
-    border-width: 15px;
-    border-radius: 36px;
-    flex-wrap: wrap;
-    overflow: hidden;
-    word-wrap: break-word;
+.card {
+    display: none; /* Hiding all cards by default */
+    transition: opacity 5s ease-in-out;
 }
 
-.resumeSectionContent {
-    padding: 10px;
-    text-align: center;
-    width: 100%;
+.card-title {
+    font-size: 3vw;
 }
 
-.socialLinks {
-    font-size: 150%;
+.card-body h3{
+    font-size: 2.25vw;
+}
+
+.card-body h4{
+    font-size: 2vw;
+}
+
+.card-body {
+    font-size: 1.5vw;
+}
+
+.card-body a {
+    font-size: 2vw;
 }
 
 .sideNavItem {
     margin: 1.8vw 0;
     padding: 0;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-shadow: 2px -2px black;
 }
 
 .sideNavItemSelected {
-    font-size: 3vw;
     text-decoration: underline;
+    color: #df9c00
 }
 
 .sideNavItem a {
@@ -138,91 +125,4 @@ ul {
 
 .centerContent {
     text-align: center;
-}
-
-#skillsSectionContent {
-    display: flex;
-}
-
-#skillsSectionContent h2 {
-    margin-top: 0;
-}
-
-#skillsSectionContent li {
-    font-size: 1.5vw;
-}
-
-#cloudResumeBody {
-    width: 100%;
-    height: 800px;
-    padding: 0px;
-    margin: 0px;
-}
-
-#sideNav {
-    height: 97vh;
-    width: 20%;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5%;
-    background-color: #df9c00;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin-block: 10px;
-    border-style: solid;
-    border-color: black;
-    border-width: 15px;
-    border-radius: 36px;
-}
-
-@media (max-height: 650px) {
-    .sideNavItem {
-        font-size: 1.8vw;
-        margin: 1.4vw 0;
-    }
-
-    .sideNavItemSelected {
-        font-size: 2.5vw;
-        text-decoration: underline;
-    }
-}
-
-@media (max-height: 500px) {
-    .sideNavItem {
-        font-size: 1.4vw;
-        margin: 1vw 0;
-    }
-
-    .sideNavItemSelected {
-        font-size: 2.5vw;
-        text-decoration: underline;
-    }
-}
-
-@media (max-height: 400px) {
-    .sideNavItem {
-        font-size: 1.2vw;
-        margin: 0.5vw 0;
-    }
-
-    .sideNavItemSelected {
-        font-size: 2.25vw;
-        text-decoration: underline;
-    }
-}
-
-@media (max-height: 300px) {
-    .sideNavItem {
-        font-size: 1.2vw;
-        margin: 0.1vw 0;
-    }
-
-    .sideNavItemSelected {
-        font-size: 2vw;
-        text-decoration: underline;
-    }
 }

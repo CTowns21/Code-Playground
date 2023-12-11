@@ -1,53 +1,21 @@
 $(document).ready(function(){
 
-    // Handle sliding navigation
-    function updateSlideNav() {
-       
-        // Get the current scroll position
-        var scrollPosition = $(document).scrollTop();
-        var windowHeight = $(window).height();
-        var windowCenter = scrollPosition + windowHeight / 2;
-        var windowWidth = $(window).width();
-        var windowHorizontalCenter = windowWidth / 2;
-
-        // Initialize variables to track the closest section and its distance to the window center
-        var closestSection = null;
-        var closestDistance = Infinity;
-
-        // Iterate through each section and check if it's in view
-        $(".resumeSection").each(function(){
-
-            var sectionTop = $(this).offset().top;
-            var sectionBottom = sectionTop + $(this).outerHeight();
-            var sectionVerticalCenter = (sectionTop + sectionBottom) / 2;
-
-            var sectionLeft = $(this).offset().left;
-            var sectionRight = sectionLeft + $(this).outerWidth();
-            var sectionHorizontalCenter = (sectionLeft + sectionRight) / 2;
-
-            // Calculate the distance between the section center and the window center
-            var verticalDistance = Math.abs(windowCenter - sectionVerticalCenter);
-            var horizontalDistance = Math.abs(windowHorizontalCenter - sectionHorizontalCenter);
-
-            // Combine vertical and horizontal distances for a total distance
-            var distance = Math.sqrt(verticalDistance ** 2 + horizontalDistance ** 2);
-           
-            // Check if the current position is in view
-            if (distance < closestDistance) {
-                closestDistance = distance;
-                closestSection = this;
-            }
-        });
-
-        // Remove the selected class from all sideNavButtons
-        $('.sideNavItem').removeClass("sideNavItemSelected");
-
-        // Add the selected class to the corresponding sideNavButton
-        if(closestSection) {
-            var sectionId = $(closestSection).attr("id")
-            $('.sideNavItem:has(a[href="#' + sectionId + '"])').addClass("sideNavItemSelected");
-        }
+    // Function to show/hide cards based on navigation clicks
+    function showCard(cardId) {
+        // Hide all cards
+        $('.card').hide();
+        // Show the selected card
+        $('#' + cardId).show();
     }
+
+    // Default card to show
+    showCard('aboutSection');
+
+    // Navigation click behavior
+    $('.sideNavItem').click(function() {
+        var sectionId = $(this).find('a').attr('href').substring(1);
+        showCard(sectionId);
+    })
 
     // Starting every page load at top
     $('html, body').animate({
@@ -57,12 +25,6 @@ $(document).ready(function(){
     $('body').css('display', 'none')
         .fadeIn(2000, function(){
             $('#sideNav').slideDown(1250);
-            $("#defaultItem a").click();
-    });
-
-    // Call updateSlideNav() on scroll
-    $(window).scroll(function(){
-        updateSlideNav();
     });
 
     // sideNavItem click behavior

@@ -125,3 +125,12 @@ ul {
 .centerContent {
     text-align: center;
 }
+
+.listSpace {
+    margin-bottom: 15px;;
+}
+
+#expList {
+    list-style: outside;
+    font-size: 95%;
+}

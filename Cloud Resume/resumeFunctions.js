@@ -50,7 +50,7 @@ $(document).ready(function(){
       var colorIndices = [0,1,2,3];
      
       //transition speed
-      var gradientSpeed = 0.002;
+      var gradientSpeed = 0.003;
      
       function updateGradient()
       {

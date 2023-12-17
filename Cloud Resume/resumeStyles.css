@@ -3,10 +3,13 @@ html {
 }
 
 body {
-    font-family: 'Jost', sans-serif;
     color: #2d3746;
     background-color: #222831;
     padding-top: 150px;
+}
+
+html, body {
+    font-family: 'Jost', sans-serif !important;
 }
 
 p {
@@ -38,8 +41,14 @@ a:hover {
     color: purple;
 }
 
+img {
+    width: 15vw;
+    height: 15vw;
+    margin: 10px;
+}
+
 h2 {
-    text-shadow: 2px -2px #df9c00;
+    text-shadow: 3px 2px #df9c00;
     padding-bottom: 20px;
 }
 
@@ -47,8 +56,12 @@ h2, .sideNavItem {
     text-transform: uppercase;
 }
 
+h3 {
+    font-style: italic;
+}
+
 h4 {
-    font-size: 1.8vw;
+    font-style: italic;
 }
 
 ul {

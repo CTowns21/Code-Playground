@@ -74,7 +74,6 @@ ul {
 .card {
     display: none; /* Hiding all cards by default */
     transition: opacity 5s ease-in-out;
-    max-height: 80vh;
     margin: auto;
     overflow: auto;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);

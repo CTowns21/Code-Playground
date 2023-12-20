@@ -6,6 +6,11 @@ $(document).ready(function(){
         $('.card').hide();
         // Show the selected card
         $('#' + cardId).show();
+
+        // Scroll to the top of the selected section, accounting for the navigation bar
+        $('html, body').animate({
+          scrollTop: $('#' + cardId).offset().top - $('.navbar').outerHeight() - 40
+        }, 'slow');
     }
 
     // Default card to show
@@ -17,10 +22,7 @@ $(document).ready(function(){
         showCard(sectionId);
     })
 
-    // Starting every page load at top
-    $('html, body').animate({
-        scrollTop: 0
-    }, 0);
+    // Use fade in effect after everything is ready
     $('#sideNav').css('display', 'none');
     $('body').css('display', 'none')
         .fadeIn(2000, function(){
@@ -35,9 +37,9 @@ $(document).ready(function(){
 
     var colors = new Array(
         [4,0,128], // Navy
-        [235,227,0], // Weird Yellow
+        [102,255,178], // Seafoam Green
         [0,227,255], // Sky Blue
-        [249,204,255], // Light Pink
+        [249,180,255], // Light Pink
         [0,74,255], // Kappa Blue
         [255,255,153]); // Light Yellow
      

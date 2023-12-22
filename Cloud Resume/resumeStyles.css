@@ -148,6 +148,10 @@ ul {
     margin-bottom: 15px;;
 }
 
+.skillList {
+    margin-bottom: 20px !important;
+}
+
 #expList {
     list-style: outside;
     font-size: 95%;

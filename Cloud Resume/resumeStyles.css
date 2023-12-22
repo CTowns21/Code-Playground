@@ -4,7 +4,7 @@ html {
 
 body {
     color: #2d3746;
-    background-color: #222831 !important;
+    background-color: #222831;
     padding-top: 150px;
 }
 
@@ -57,11 +57,7 @@ h2, .sideNavItem {
     text-transform: uppercase;
 }
 
-h3 {
-    font-style: italic;
-}
-
-h4 {
+h3, h4 {
     font-style: italic;
 }
 
@@ -151,4 +147,40 @@ ul {
 #expList {
     list-style: outside;
     font-size: 95%;
+}
+
+@media (max-width: 1000px) {
+    li {
+        font-size: 1.2rem !important;
+    }
+    
+    p {
+        font-size: 1.5rem !important;
+        padding: 0;
+    }
+    
+    h3 {
+        font-size: 2rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+    .card {
+        min-height: 300px;
+    }
+    
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-title {
+        font-size: 2.5rem;
+    }
+
+    .col-7, .col-md-6 {
+        width: 100% !important;
+    }
 }

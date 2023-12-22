@@ -20,6 +20,8 @@ $(document).ready(function(){
     $('.sideNavItem').click(function() {
         var sectionId = $(this).find('a').attr('href').substring(1);
         showCard(sectionId);
+        $(this).addClass("sideNavItemSelected");
+        $(this).siblings().removeClass("sideNavItemSelected");
     })
 
     // Use fade in effect after everything is ready
@@ -27,12 +29,6 @@ $(document).ready(function(){
     $('body').css('display', 'none')
         .fadeIn(2000, function(){
             $('#sideNav').slideDown(1250);
-    });
-
-    // sideNavItem click behavior
-    $('.sideNavItem').click(function(){
-        $(this).addClass("sideNavItemSelected");
-        $(this).siblings().removeClass("sideNavItemSelected");
     });
 
     var colors = new Array(

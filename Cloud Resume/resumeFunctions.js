@@ -15,6 +15,8 @@ $(document).ready(function(){
 
     // Default card to show
     showCard('aboutSection');
+    var defaultSection = document.getElementById("defaultItem");
+    defaultSection.classList.add("sideNavItemSelected");
 
     // Navigation click behavior
     $('.sideNavItem').click(function() {

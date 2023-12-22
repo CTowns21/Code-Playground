@@ -5,7 +5,7 @@ html {
 body {
     color: #2d3746;
     background-color: #222831;
-    padding-top: 150px;
+    padding-top: 15vh;
 }
 
 html, body {
@@ -42,8 +42,8 @@ a:hover {
 }
 
 img {
-    max-width: 100%;
-    width: 13vw;
+    max-width: 50%;
+    width: 50%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -94,6 +94,10 @@ ul {
 
 .card-body a {
     font-size: 2vw;
+}
+
+.img-fluid-min {
+    min-width: 130px !important;
 }
 
 .sideNavItem {
@@ -150,11 +154,15 @@ ul {
 }
 
 @media (max-width: 1000px) {
+    body {
+        padding-top: 50px;
+    }
+    
     li {
         font-size: 1.2rem !important;
     }
     
-    p {
+    p, a {
         font-size: 1.5rem !important;
         padding: 0;
     }

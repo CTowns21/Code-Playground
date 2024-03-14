@@ -17,9 +17,6 @@ $(document).ready(function(){
     showCard('aboutSection');
     var defaultSection = document.getElementById("defaultItem");
     defaultSection.classList.add("sideNavItemSelected");
-    var visitorCount = $.getJSON("https://itdtg5vks1.execute-api.us-east-1.amazonaws.com/default/viewCounterHandler");
-    console.log(visitorCount);
-    document.getElementById("view-count").innerHTML = "This website has been visited " + visitorCount["body"]["views"] + "times!";
 
     // Navigation click behavior
     $('.sideNavItem').click(function() {

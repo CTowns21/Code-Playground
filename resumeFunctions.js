@@ -13,6 +13,7 @@ $(document).ready(function(){
         }, 'slow');
     }
 
+    // Function to update view-count on page using API Gateway
     function updateViewCount() {
       fetch('https://oag47wy204.execute-api.us-east-1.amazonaws.com/default/viewCounterHandler')
         .then(response => {

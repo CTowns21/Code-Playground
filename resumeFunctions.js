@@ -14,7 +14,7 @@ $(document).ready(function(){
     }
 
     function updateViewCount() {
-      fetch('https://itdtg5vks1.execute-api.us-east-1.amazonaws.com/default/viewCounterHandler')
+      fetch('https://oag47wy204.execute-api.us-east-1.amazonaws.com/default/viewCounterHandler')
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to fetch view count');

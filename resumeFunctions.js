@@ -36,7 +36,7 @@ $(document).ready(function(){
         });
     }
 
-    // Default card to show
+    // Default card to show on page load
     showCard('aboutSection');
     var defaultSection = document.getElementById("defaultItem");
     defaultSection.classList.add("sideNavItemSelected");

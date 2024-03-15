@@ -22,8 +22,12 @@ $(document).ready(function(){
           return response.json();
         })
         .then(data => {
-          // Update the view count on the webpage
-          document.getElementById('view-count').textContent = "This website has been visited " + data.views + " times!";
+          if (Array.isArray(data) && data.length > 0) {
+            // Update the view count on the webpage
+            document.getElementById('view-count').textContent = "This website has been visited " + data[0].views + " times!";
+          } else {
+            throw new Error('Invalid response format');
+          }
         })
         .catch(error => {
           console.error('Error fetching view count:', error);

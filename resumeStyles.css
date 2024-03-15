@@ -68,7 +68,7 @@ ul {
 }
 
 .card {
-    display: none; /* Hiding all cards by default */
+    display: none; /* Hide all cards by default */
     transition: opacity 5s ease-in-out;
     margin: auto;
     overflow: auto;

@@ -23,7 +23,7 @@ $(document).ready(function(){
         })
         .then(data => {
           // Update the view count on the webpage
-          document.getElementById('view-count').textContent = "This website has been visited" + data.views + "times!";
+          document.getElementById('view-count').textContent = "This website has been visited " + data.views + " times!";
         })
         .catch(error => {
           console.error('Error fetching view count:', error);

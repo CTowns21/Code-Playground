@@ -13,10 +13,30 @@ $(document).ready(function(){
         }, 'slow');
     }
 
+    function updateViewCount() {
+      fetch('https://itdtg5vks1.execute-api.us-east-1.amazonaws.com/default/viewCounterHandler')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch view count');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Update the view count on the webpage
+          document.getElementById('view-count').textContent = "This website has been visited" + data.views + "times!";
+        })
+        .catch(error => {
+          console.error('Error fetching view count:', error);
+          // Display message in event that API call fails
+          document.getElementById('view-count').textContent = "The live view counter isn't working right now. You COULD be the millionth visitor!";
+        });
+    }
+
     // Default card to show
     showCard('aboutSection');
     var defaultSection = document.getElementById("defaultItem");
     defaultSection.classList.add("sideNavItemSelected");
+    updateViewCount();
 
     // Navigation click behavior
     $('.sideNavItem').click(function() {
